@@ -22,7 +22,7 @@ To use this project, follow these steps:
 
 Using this template to create a new Django app is easy:
 
-    $ django-admin startproject --template=https://gitlab.com/kolab/gate-django-template/repository/archive.zip?ref=master --extension=ini,py --name=Procfile helloworld .
+    $ django-admin startproject --template=https://github.com/Leeaandrob/django-template-products/repository/archive.zip?ref=master --extension=ini,py --name=Procfile helloworld .
 
 You can replace ``helloworld`` with your desired project name.
 
