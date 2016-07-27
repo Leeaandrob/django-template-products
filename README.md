@@ -34,8 +34,8 @@ You can replace ``helloworld`` with your desired project name.
 
     $ heroku create {{ project_name }}
     $ heroku config:set SECRET_KEY='{{ secret_key }}'
-    $ heroku config:set GATE_APPLICATION_NAME={{ project_name }}
-    $ heroku config:set GATE_URL=https://accounts.gate.cx/
+    $ heroku config:set MANO_APPLICATION_NAME={{ project_name }}
+    $ heroku config:set MANO_URL=https://accounts.mano.cx/
     $ heroku config:set DEBUG=False
     $ heroku config:set FORCE_SSL=False
     $ heroku config:set RAVEN_URL={{ SENTRY DSN URL }}

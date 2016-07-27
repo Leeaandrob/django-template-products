@@ -16,7 +16,8 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'raven.contrib.django.raven_compat',
-    'gate_id',
+
+    'mano_id',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -28,7 +29,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
-    'gate_id.middleware.GateSessionMiddleware',
+    'mano_id.middleware.ManoSessionMiddleware',
 )
 
 ROOT_URLCONF = '{{ project_name }}.urls'
@@ -99,10 +100,10 @@ STATICFILES_DIRS = [
 ]
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
-AUTH_USER_MODEL = 'gate_id.User'
+AUTH_USER_MODEL = 'mano_id.User'
 
-GATE_APPLICATION_NAME = config('GATE_APPLICATION_NAME')
-GATE_URL = config('GATE_URL')
+MANO_APPLICATION_NAME = config('MANO_APPLICATION_NAME')
+MANO_URL = config('MANO_URL')
 
 LOGIN_URL = '/login/'
 
