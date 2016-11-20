@@ -16,8 +16,6 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'raven.contrib.django.raven_compat',
-
-    'mano_id',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -29,7 +27,6 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
-    'mano_id.middleware.ManoSessionMiddleware',
 )
 
 ROOT_URLCONF = '{{ project_name }}.urls'
@@ -65,16 +62,20 @@ DATABASES = {
 
 AUTH_PASSWORD_VALIDATORS = (
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        'NAME': 'django.contrib.auth.password_validation.UserAttribute'
+        'SimilarityValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'NAME': 'django.contrib.auth.password_validation.MinimumLength'
+        'Validator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+        'NAME': 'django.contrib.auth.password_validation.CommonPassword'
+        'Validator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+        'NAME': 'django.contrib.auth.password_validation.NumericPassword'
+        'Validator',
     },
 )
 
@@ -99,11 +100,6 @@ STATICFILES_DIRS = [
     BASE_DIR.child('static'),
 ]
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
-
-AUTH_USER_MODEL = 'mano_id.User'
-
-MANO_APPLICATION_NAME = config('MANO_APPLICATION_NAME')
-MANO_URL = config('MANO_URL')
 
 LOGIN_URL = '/login/'
 
@@ -150,7 +146,8 @@ LOGGING = {
         },
         'sentry': {
             'level': 'ERROR',
-            'class': 'raven.contrib.django.raven_compat.handlers.SentryHandler',
+            'class': 'raven.contrib.django.raven_compat.handlers.Sentry'
+            'Handler',
         },
     },
     'loggers': {
