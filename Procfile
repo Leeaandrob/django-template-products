@@ -1,1 +1,1 @@
-web: uwsgi uwsgi.ini
+-web: gunicorn {{ project_name }}.wsgi --log-file -
