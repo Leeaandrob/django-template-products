@@ -1,6 +1,6 @@
 dj-database-url
 Django
-uwsgi
+gunicorn
 psycopg2
 whitenoise
 unipath==1.1
